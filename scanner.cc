@@ -298,7 +298,7 @@ bool scan(string code, vector<Token>& tokens) {
       tokens.push_back(mapState(current, lexeme));
 
       current = State::INIT;
-			lexeme = "";
+      lexeme = "";
       
       if (i == code.size()) {
         return true;
