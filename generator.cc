@@ -526,7 +526,7 @@ void generateCode(Node& head, unordered_map<string, Scope>& symbols, string scop
 
         head.partial = make_tuple(partialCode, PartialType::CODE);
     } else if (head.rule == "dcl type ID") {
-		head.partial = make_pair(to_string(get<1>(currentScope.variables[head.children.at(1).tokens.at(1)])), PartialType::LOCATION);
+	head.partial = make_pair(to_string(get<1>(currentScope.variables[head.children.at(1).tokens.at(1)])), PartialType::LOCATION);
     } else if (head.rule == "expr term" || head.rule == "term factor" || head.rule == "procedures main" || head.rule == "arglist expr" || head.rule == "factor NUM" || head.rule == "factor NULL") {
         head.partial = head.children.at(0).partial;
     } else if (head.rule == "factor ID" || head.rule == "lvalue ID") {
