@@ -507,7 +507,7 @@ void generateCode(Node& head, unordered_map<string, Scope>& symbols, string scop
         partialCode += saveInstruction("$1", get<0>(head.children.at(3).partial), "$29");
         partialCode += saveInstruction("$2", get<0>(head.children.at(5).partial), "$29");
 
-		if (head.children.at(3).children.at(0).tokens.size() == 2) {
+	if (head.children.at(3).children.at(0).tokens.size() == 2) {
             partialCode += loadSkipInstruction("$2", "0");
         }
 
